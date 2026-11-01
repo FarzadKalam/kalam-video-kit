@@ -2,6 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import {execFileSync} from 'node:child_process';
 import {ROOT,safeId,inside} from '../scripts/lib/paths.mjs';
 import {createProject} from '../scripts/projects.mjs';
 function fixture(){
@@ -23,6 +24,8 @@ test('new job preserves original files, Unicode and refuses overwriting an exist
   const state=JSON.parse(fs.readFileSync(path.join(p,'project.json'),'utf8'));
   assert.equal(state.audio.scriptApproval,null);assert.equal(state.audio.mode,'undecided');
   assert.equal(state.width,1080);assert.equal(state.height,1920);
+  const sound=JSON.parse(fs.readFileSync(path.join(p,'sound-plan.json'),'utf8'));
+  assert.equal(sound.fps,state.fps);assert.equal(sound.review.listened,false);assert.deepEqual(sound.events,[]);
   assert.throws(()=>createProject({id:'job',brand:'test'},root));
   assert.throws(()=>createProject({id:'bad',brand:'test',mode:'invalid'},root));
 });
@@ -36,4 +39,9 @@ test('a junction cannot redirect a project write outside its workspace',()=>{
   fs.symlinkSync(outside,path.join(root,'.local/projects'),'junction');
   assert.throws(()=>createProject({id:'job',brand:'test'},root));
   assert.ok(!fs.existsSync(path.join(outside,'job')));
+});
+test('CLI home caches stay on the workspace drive without changing the user profile',()=>{
+  const home=path.join(ROOT,'.cache/runtime-home-test');
+  const value=execFileSync(process.execPath,['--require',path.join(ROOT,'scripts/runtime-home.cjs'),'--input-type=module','-e',"import {homedir} from 'node:os'; console.log(homedir());"],{env:{...process.env,KALAM_RUNTIME_HOME:home},encoding:'utf8'}).trim();
+  assert.equal(value,path.resolve(home));
 });

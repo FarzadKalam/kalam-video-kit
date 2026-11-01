@@ -11,6 +11,8 @@ description: تدوین فارسی برای رسانه‌های کلام و مش
 
 یک سفارش مستقل با `npm run new` بساز؛ `DECISIONS.md` و `project.json` حافظهٔ ادامه هستند. ترتیب read فقط فایل‌های لازم: خبر → `docs/workflows/news.md`؛ تبلیغ/بلاگر/محصول → `docs/workflows/advertising.md`؛ صدا → `docs/audio.md`؛ تحویل → `docs/quality.md`.
 
+هر footage چهره‌دار → `docs/workflows/presenter.md`؛ فقط به زیرنویس اکتفا نکن. متن/افکت پشت سوژه و تغییر قاب/موقعیت را از محتوا انتخاب و جداسازی و همگامی واقعی را بررسی کن. مرجع‌های جدید مالک در `docs/references/instagram-2026-11-02.md` هستند. SFX و زمان رویدادها در `sound-plan.json` ثبت و با رندر و شنیدن، در حد ابزار موجود، بررسی شوند.
+
 `npm run catalog -- --query <موضوع>` برای نمونه‌تکنیک‌ها؛ موتور و کد واقعی هر مرجع را بررسی کن. صحنه‌ها باید معنا، مقیاس و حرکت متفاوت داشته باشند، نه اجبار به تعدادی کارت. آزادی طراحی را با تعداد افکت، زمان ثابت صحنه یا سقف لایه محدود نکن.
 
 HyperFrames: مهارت `../hyperframes/SKILL.md` و مرجع لازم آن. Remotion: `../remotion-best-practices/SKILL.md` اگر حاضر است، سپس `docs/engines.md` و `engines/remotion/`؛ اگر skill upstream دریافت نشده، از راهنمای رسمی لینک‌شده استفاده و وضعیت را صادقانه اعلام کن.

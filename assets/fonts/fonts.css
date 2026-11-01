@@ -26,3 +26,5 @@
 @font-face{font-family:'Morabba';src:url('Morabba/Morabba-VF.woff2') format('woff2');font-weight:250 900;font-style:normal;font-display:block}
 @font-face{font-family:'MorabbaHeavy';src:url('Morabba/Morabba-Heavy.woff2') format('woff2');font-weight:900;font-style:normal;font-display:block}
 @font-face{font-family:'Morabba';src:url('Morabba/Morabba-UltraLight.woff2') format('woff2');font-weight:200;font-style:normal;font-display:block}
+@font-face{font-family:'Doran';src:url('Doran/Doran-VF.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}
+@font-face{font-family:'DoranFaNum';src:url('Doran/Doran-FaNum-VF.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:block}

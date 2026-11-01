@@ -3,7 +3,7 @@
   "id": "kalam-shahr",
   "name": "آژانس تبلیغاتی کلام شهر",
   "category": "advertising",
-  "status": "partial",
+  "status": "ready",
   "primaryColor": "#361775",
   "handle": "@kalameshahr",
   "website": "https://kalam-shahr.ir",
@@ -17,7 +17,7 @@
   ],
   "fontPolicy": {
     "primary": "Doran",
-    "status": "awaiting-font-file",
-    "selection": "owner-fixed"
+    "selection": "owner-confirmed",
+    "status": "available"
   }
 }

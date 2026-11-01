@@ -3,21 +3,21 @@
   "id": "tazesystem",
   "name": "نرم‌افزار ابری تازه سیستم",
   "category": "product",
-  "status": "partial",
+  "status": "ready",
   "primaryColor": "#F82377",
   "secondaryColor": "#8E1646",
   "handle": null,
-  "website": null,
+  "website": "https://tazesystem.ir",
   "assets": {
     "logo": "assets/brands/tazesystem/logo.png"
   },
   "headerPolicy": "product-identity",
-  "font": null,
+  "font": "Peyda",
   "notes": [
-    "لوگو و تم سرخابی از Kalamapp؛ پیش از سفارش، تطبیق لوگو با نسخهٔ نهایی برند و CTA/آیدی تأیید شود."
+    "لوگو و تم سرخابی از دارایی عمومی Kalamapp؛ فونت پیدا و سایت tazesystem.ir به تأیید مالک در ۲۰۲۶-۱۱-۰۲."
   ],
   "fontPolicy": {
-    "primary": null,
-    "status": "awaiting-owner-choice"
+    "primary": "Peyda",
+    "selection": "owner-confirmed"
   }
 }

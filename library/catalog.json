@@ -250,5 +250,111 @@
     "installCommand": "npm run hf -- add lt-kicker-name",
     "registryItem": "lt-kicker-name",
     "verification": "Technique description from actual registry metadata; code must be installed and inspected before use."
+  },
+  {
+    "id": "presenter-depth",
+    "name": "متن پشت شخصیت و تغییر قاب",
+    "description": "لایه‌بندی original، گرافیک و cutout همگام؛ نیازمند کنترل ماسک هر footage.",
+    "engine": "either",
+    "tags": [
+      "چهره",
+      "بلاگر",
+      "خبر",
+      "پشت سوژه",
+      "قاب"
+    ],
+    "techniques": [
+      "alpha زمان‌دار",
+      "همگامی trim و FPS",
+      "reframe کل قاب یا سوژه روی زمینهٔ مستقل",
+      "کنترل لبه و نبود شخص دوتایی"
+    ],
+    "sourceType": "workflow-recipe",
+    "code": "docs/workflows/presenter.md",
+    "verification": "Documented workflow; local model download incomplete, no successful cutout render claimed."
+  },
+  {
+    "id": "continuous-depth-world",
+    "name": "فضای پیوسته، نور و قاب‌های شناور",
+    "description": "برداشت تصویری از نمونه‌های مالک؛ یک عنصر در طول روایت تغییر حالت می‌دهد.",
+    "engine": "unknown",
+    "tags": [
+      "مرجع",
+      "عمق",
+      "نور",
+      "موبایل",
+      "کارت",
+      "تایپوگرافی"
+    ],
+    "techniques": [
+      "perspective قاب",
+      "موتیف نور پیوسته",
+      "تغییر روشن/تیره",
+      "واژه یا عبارت یکپارچهٔ فارسی",
+      "زیرنویس مستقل"
+    ],
+    "sourceType": "visual-reference",
+    "code": "docs/references/instagram-2026-11-02.md",
+    "verification": "Frames inspected locally; source code, render engine and audio not verified."
+  },
+  {
+    "id": "prompt-motion",
+    "name": "Prompt Motion",
+    "source": "https://prompt-motion.com/",
+    "description": "نمونهٔ ویدیو و prompt با منبع سازنده و فیلتر موضوعی.",
+    "engine": "unknown",
+    "tags": [
+      "مرجع",
+      "پرامپت",
+      "موشن",
+      "ایده"
+    ],
+    "techniques": [
+      "بررسی منبع و مجوز هر اثر",
+      "تشخیص ابزار فقط از کد یا manifest",
+      "اقتباس تکنیک برای محتوای خودمان"
+    ],
+    "sourceType": "external-library",
+    "verification": "Official page reviewed; individual example toolchains require source inspection."
+  },
+  {
+    "id": "ai-x-leaders",
+    "name": "AI x Leaders",
+    "source": "https://ai-x-leaders.com/en/prompt/",
+    "description": "آدرس دیده‌شده در ریل؛ دریافت مستقیم صفحه و مجوز نمونه‌ها هنوز بررسی‌نشده.",
+    "engine": "unknown",
+    "tags": [
+      "مرجع",
+      "پرامپت",
+      "موشن",
+      "ایده"
+    ],
+    "techniques": [
+      "بررسی منبع و مجوز هر اثر",
+      "تشخیص ابزار فقط از کد یا manifest",
+      "اقتباس تکنیک برای محتوای خودمان"
+    ],
+    "sourceType": "external-library",
+    "verification": "URL observed in video; live page retrieval pending."
+  },
+  {
+    "id": "youmind-motion",
+    "name": "YouMind — Motion Prompts",
+    "source": "https://youmind.com/opus-5-5-prompts",
+    "description": "نمونه‌ها و promptهای ایده؛ خروجی مرورگری ممکن است رندر جدا بخواهد.",
+    "engine": "unknown",
+    "tags": [
+      "مرجع",
+      "پرامپت",
+      "موشن",
+      "ایده"
+    ],
+    "techniques": [
+      "بررسی منبع و مجوز هر اثر",
+      "تشخیص ابزار فقط از کد یا manifest",
+      "اقتباس تکنیک برای محتوای خودمان"
+    ],
+    "sourceType": "external-library",
+    "verification": "Official page reviewed; individual example toolchains require source inspection."
   }
 ]

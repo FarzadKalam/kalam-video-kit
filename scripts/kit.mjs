@@ -32,7 +32,7 @@ try {
     const pkg=readJson(path.join(ROOT,'node_modules/hyperframes/package.json'));
     const entry=typeof pkg.bin==='string'?pkg.bin:pkg.bin.hyperframes;
     env.PATH=[path.dirname(binary('ffmpeg')),path.dirname(binary('ffprobe')),env.PATH].join(path.delimiter);
-    run(process.execPath,[path.join(ROOT,'node_modules/hyperframes',entry),...args]);
+    run(process.execPath,['--require',path.join(ROOT,'scripts/runtime-home.cjs'),path.join(ROOT,'node_modules/hyperframes',entry),...args]);
   } else if(command==='media') {
     const [action,input,output]=args; if(!input||!fs.existsSync(input))throw new Error('فایل ورودی پیدا نشد.');
     if(action==='probe')run(binary('ffprobe'),['-v','error','-show_format','-show_streams','-of','json',path.resolve(input)]);

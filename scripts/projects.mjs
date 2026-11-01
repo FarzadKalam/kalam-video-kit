@@ -17,6 +17,7 @@ export function createProject({id,brand,mode='motion',engine='hyperframes',width
   writeJson(path.join(project,'project.json'),{schemaVersion:1,id,brand,mode,engine,width,height,fps:30,phase:'brief',
     audio:{mode:'undecided',scriptApproval:null,narrationFile:null},fonts:profile.fontPolicy||{primary:profile.font||'Peyda',selection:'project-brief'},brandReady:profile.status==='ready',createdAt:new Date().toISOString()});
   writeJson(path.join(project,'brand.json'),profile);
+  writeJson(path.join(project,'sound-plan.json'),{schemaVersion:1,fps:30,events:[],tracks:[],review:{status:'pending',listened:false,notes:''}});
   fs.writeFileSync(path.join(project,'BRIEF.md'),`# سفارش ${id}\n\nبرند: ${profile.name}\nنوع: ${mode}\nهدف و مخاطب:\nمنبع خبر/محصول:\nفایل‌های اصلی:\nمتن قطعی و CTA:\nوضعیت سناریو/تأیید متن:\nنریشن کاربر / گفتار موجود / بی‌نریشن / کاملاً بی‌صدا:\nمدت تقریبی:\nموارد الزامی یا ممنوع:\n\nهویتِ ناقص باید پیش از ساخت گرافیک برند تکمیل شود.\n`,'utf8');
   for(const [name,text] of Object.entries({'DECISIONS.md':'# تصمیم‌های سفارش\n\nتأیید واقعی متن، تغییرات کاربر و دلیل انتخاب موتور با تاریخ و مرجع پیام ثبت شود.\n','REVIEW.md':'# بازبینی\n\nوضعیت: pending\n\n| بررسی | نتیجه | مدرک |\n| --- | --- | --- |\n| محتوا و برند | pending | |\n| زمان و صدا | pending | |\n| فریم‌ها | pending | |\n| رندر و ffprobe | pending | |\n'})) fs.writeFileSync(path.join(project,name),text,'utf8');
   if(engine==='hyperframes') {

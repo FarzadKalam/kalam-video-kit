@@ -56,16 +56,6 @@ window.KALAM_FONTS = [
     "defaultContext": "captions-and-body"
   },
   {
-    "family": "Doran",
-    "status": "awaiting-user-file",
-    "files": [],
-    "notes": "W_doran was inspected and explicitly rejected by the user; not included.",
-    "nameFa": "دوران",
-    "recommendedRoles": [],
-    "guidance": "فایل درست هنوز دریافت نشده؛ W_doran وارد نشده است.",
-    "defaultContext": "kalam-shahr-primary-pending"
-  },
-  {
     "family": "Aria",
     "nameFa": "آریا",
     "status": "available",
@@ -405,7 +395,7 @@ window.KALAM_FONTS = [
       "captions",
       "ui"
     ],
-    "guidance": "برای متن تبلیغاتی خوانا، معرفی نرم‌افزار، رابط و زیرنویس؛ نسخهٔ FaNum و محور dots موجود است. انتخاب به‌عنوان فونت تازه سیستم هنوز با مالک تعیین نشده است.",
+    "guidance": "برای متن تبلیغاتی خوانا، معرفی نرم‌افزار، رابط و زیرنویس؛ نسخهٔ FaNum و محور dots موجود است. برای تازه سیستم پیدا انتخاب مالک است؛ این خانواده برای تبلیغات و مشتریان در دسترس می‌ماند.",
     "rights": "Owner-supplied for this private team kit; do not publish font files publicly.",
     "files": [
       {
@@ -530,5 +520,62 @@ window.KALAM_FONTS = [
       }
     ],
     "defaultContext": "advertising-preferred"
+  },
+  {
+    "family": "Doran",
+    "nameFa": "دوران پرو",
+    "status": "available",
+    "defaultContext": "kalam-shahr-primary",
+    "recommendedRoles": [
+      "headline",
+      "brand",
+      "advertising",
+      "short-body"
+    ],
+    "guidance": "فونت اصلی کلام شهر به انتخاب مالک؛ نسخهٔ متغیر اصلی و FaNum از بستهٔ DoranPro1.1. در بقیهٔ برندها انتخاب صریح کاربر مقدم است.",
+    "rights": "Owner-supplied for the private team repository; not for public redistribution.",
+    "files": [
+      {
+        "path": "Doran/Doran-VF.woff2",
+        "weightRange": [
+          100,
+          900
+        ],
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 100,
+            "default": 100,
+            "max": 900
+          }
+        ],
+        "style": "Regular",
+        "sourceFamily": "Doran VF",
+        "persianLettersVerified": true,
+        "sourceSha256": "bd89e8eeff134e1cc7c9ec1e7ec1c315a982e045611ca0de914e4a7f12737a3d",
+        "sha256": "d49aec9c62adbe1416bcd941eac0b2a4fd71f794ee3827668d21c14810dc212f"
+      },
+      {
+        "path": "Doran/Doran-FaNum-VF.woff2",
+        "weightRange": [
+          100,
+          900
+        ],
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 100,
+            "default": 100,
+            "max": 900
+          }
+        ],
+        "style": "Regular",
+        "sourceFamily": "Doran FaNum VF",
+        "persianLettersVerified": true,
+        "sourceSha256": "a5231d5156000db54db59446a9520eb50b92405996032f61fa19ca1d822c94bc",
+        "sha256": "314f8849856f30b8b5d3c97fbb145f260a839ef7defc22a92c0285d888516e4a",
+        "cssFamily": "DoranFaNum"
+      }
+    ]
   }
 ];

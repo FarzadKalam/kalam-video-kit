@@ -21,6 +21,7 @@ export function inside(base, candidate) {
 export function localEnv(root=ROOT) {
   const cache=path.join(root,'.cache'), temp=path.join(cache,'temp'); fs.mkdirSync(temp,{recursive:true});
   return {...process.env,TEMP:temp,TMP:temp,TMPDIR:temp,npm_config_cache:path.join(cache,'npm'),
+    KALAM_RUNTIME_HOME:path.join(cache,'tool-home'),
     LOCALAPPDATA:path.join(cache,'appdata/local'),APPDATA:path.join(cache,'appdata/roaming'),
     HF_HOME:path.join(cache,'huggingface'),XDG_CACHE_HOME:cache,
     HYPERFRAMES_SKIP_SKILLS:'1',HYPERFRAMES_NO_UPDATE_CHECK:'1',

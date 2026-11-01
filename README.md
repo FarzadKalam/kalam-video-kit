@@ -49,6 +49,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup.ps1 -WithRemot
 - `.local/projects/`: فیلم، نریشن، متن، پروژه و خروجی سفارش‌ها؛ در Git ثبت نمی‌شوند.
 - `docs/`: شروع کار، سناریو، طراحی، صدا، کنترل کیفیت، مجوزها و حافظهٔ ترجیحات.
 
+برای متن و افکت پشت شخصیت و تغییر قاب، [راهنمای ویدیوی چهره‌دار](docs/workflows/presenter.md) را بخوان. [مرجع‌های تصویری مالک](docs/references/instagram-2026-11-02.md) شامل تحلیل نمونه‌ها و سایت‌های ایده است؛ فایل‌های شخصی نمونه در Git نیستند. هر سفارش `sound-plan.json` دارد تا طراحی و اجرای SFX به رویدادهای واقعی متصل بماند. wrapper ابزار حتی کش مبتنی بر home هایپرفریمز را داخل `.cache/tool-home` همین درایو نگه می‌دارد؛ از اجرای مستقیم CLI خارج wrapper پرهیز کن.
+
 ## دستورهای کاربردی
 
 ```powershell

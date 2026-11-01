@@ -5,12 +5,13 @@
   "category": "news",
   "status": "ready",
   "primaryColor": "#50b9eb",
-  "handle": "@golbahar_kalametaze",
+  "handle": "@golbahar.kalametaze",
   "website": null,
   "assets": {
     "header": "assets/brands/golbahar/header.png",
     "overlayOnLight": "assets/brands/golbahar/overlay-on-light.png",
-    "overlayOnDark": "assets/brands/golbahar/overlay-on-dark.png"
+    "overlayOnDark": "assets/brands/golbahar/overlay-on-dark.png",
+    "profile": "assets/brands/golbahar/profile.jpg"
   },
   "headerPolicy": "fixed-original-transparent",
   "font": "Peyda",
@@ -24,5 +25,7 @@
     "captionFallback": "Vazirmatn",
     "selection": "brand-default",
     "notes": "Meem explicitly disabled by owner; use Peyda for news identity."
-  }
+  },
+  "colorEvidence": "Official Kalam Studio brand map, verified 2026-11-02",
+  "handleEvidence": "Owner explicitly confirmed dot-separated Instagram handles, 2026-11-02"
 }

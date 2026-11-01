@@ -59,5 +59,32 @@
     "files": [
       "assets/brands/kalam-shahr/logo.png"
     ]
+  },
+  {
+    "type": "brand-profile",
+    "id": "kalametaze",
+    "source": "Owner-authorized official Kalam Studio profile asset and brand colour map",
+    "files": [
+      "assets/brands/kalametaze/profile.jpg"
+    ],
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "type": "brand-profile",
+    "id": "golbahar",
+    "source": "Owner-authorized official Kalam Studio profile asset and brand colour map",
+    "files": [
+      "assets/brands/golbahar/profile.jpg"
+    ],
+    "verifiedAt": "2026-11-02"
+  },
+  {
+    "type": "brand-profile",
+    "id": "chenaran",
+    "source": "Owner-authorized official Kalam Studio profile asset and brand colour map",
+    "files": [
+      "assets/brands/chenaran/profile.jpg"
+    ],
+    "verifiedAt": "2026-11-02"
   }
 ]
