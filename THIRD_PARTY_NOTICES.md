@@ -9,5 +9,6 @@
 - Peyda: proprietary owner-provided font files. Owner explicitly authorized inclusion for this private team repository; not offered for public redistribution. Only genuine supplied weights are listed.
 - Brand identity assets belong to their respective Kalam outlets and products. Owner authorized their use in this private editing kit. Per-asset sources in `assets/provenance.json`.
 - SFX: originally synthesized local effects supplied from the owner's editing lab, not commercial music downloads. Shared for this team's projects; see provenance.
+- The vendored media-use skill also ships its own bundled MP3 effects under `.agents/skills/media-use/audio/assets/sfx/`. These are part of the upstream skill snapshot, not recordings or customer media. They are the only MP3 exception in Git checks, and their upstream hashes are verified.
 
 This private repository's original-material notice does not override any of the above terms.

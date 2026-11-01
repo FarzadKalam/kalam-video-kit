@@ -13,6 +13,7 @@ __pycache__/
 *.mov
 *.mkv
 *.mp3
+!.agents/skills/media-use/audio/assets/sfx/*.mp3
 *.m4a
 *.zip
 *.7z

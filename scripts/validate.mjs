@@ -23,7 +23,8 @@ for(const entry of readJson(path.join(ROOT,'library/catalog.json')))if(entry.cod
 const list=spawnSync('git',['ls-files','--cached','--others','--exclude-standard','-z'],{cwd:ROOT,encoding:'utf8'});
 if(list.status!==0)fail('Run validation inside initialized Git repo.');
 else for(const f of list.stdout.split('\0').filter(Boolean)) {
-  if(/(^|\/)\.env($|\.)|(^|\/)(node_modules|\.local|\.cache)\/|\.(mp4|mov|mkv|mp3|m4a|pem|key)$/i.test(f))fail('Private or generated file in Git candidate: '+f);
+  const sharedVendorSfx=/^\.agents\/skills\/media-use\/audio\/assets\/sfx\/[^/]+\.mp3$/.test(f);
+  if(!sharedVendorSfx&&/(^|\/)\.env($|\.)|(^|\/)(node_modules|\.local|\.cache)\/|\.(mp4|mov|mkv|mp3|m4a|pem|key)$/i.test(f))fail('Private or generated file in Git candidate: '+f);
   if(/\.(md|json|mjs|jsx|html|ps1)$/.test(f)) {
     const p=path.join(ROOT,f); if(!fs.existsSync(p))continue;
     const t=fs.readFileSync(p,'utf8');
