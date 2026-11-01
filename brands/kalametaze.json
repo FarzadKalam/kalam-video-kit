@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "kalametaze",
+  "name": "کلام تازه .ir",
+  "category": "news",
+  "status": "partial",
+  "primaryColor": "#b5121b",
+  "handle": null,
+  "website": null,
+  "assets": {
+    "header": "assets/brands/kalametaze/header.png",
+    "overlayOnLight": "assets/brands/kalametaze/overlay-on-light.png",
+    "overlayOnDark": "assets/brands/kalametaze/overlay-on-dark.png"
+  },
+  "headerPolicy": "fixed-original-transparent",
+  "font": "Peyda",
+  "notes": [
+    "overlayOnLight/overlayOnDark یک overlay تمام‌قاب هستند؛ لوگوی کوچک فرض نشوند.",
+    "آیدی از متن یا لوگوی رسانهٔ دیگر استخراج نشود."
+  ],
+  "fontPolicy": {
+    "primary": "Peyda",
+    "complement": [],
+    "captionFallback": "Vazirmatn",
+    "selection": "brand-default",
+    "notes": "Meem explicitly disabled by owner; use Peyda for news identity."
+  }
+}

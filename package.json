@@ -1,0 +1,22 @@
+{
+  "name": "kalam-video-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.12"},
+  "scripts": {
+    "doctor": "node scripts/kit.mjs doctor",
+    "new": "node scripts/kit.mjs new",
+    "hf": "node scripts/kit.mjs hf",
+    "media": "node scripts/kit.mjs media",
+    "catalog": "node scripts/kit.mjs catalog",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "hyperframes": "0.8.227",
+    "gsap": "3.15.0",
+    "ffmpeg-static": "5.3.0",
+    "@ffprobe-installer/win32-x64": "5.1.0"
+  }
+}

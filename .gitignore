@@ -1,0 +1,24 @@
+node_modules/
+**/node_modules/
+.local/
+.cache/
+.env
+.env.*
+!.env.example
+*.log
+__pycache__/
+*.pyc
+# Shared examples are authored teaching material. Actual jobs stay in .local.
+*.mp4
+*.mov
+*.mkv
+*.mp3
+*.m4a
+*.zip
+*.7z
+*.pem
+*.key
+*.tsbuildinfo
+engines/remotion/public/assets/
+/renders/
+.hyperframes/

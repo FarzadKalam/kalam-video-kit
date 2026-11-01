@@ -1,0 +1,254 @@
+window.KALAM_CATALOG = [
+  {
+    "id": "semantic-type",
+    "name": "تایپوگرافی معنایی",
+    "description": "ورود عبارت با mask، تغییر مقیاس و تأکید واژه؛ برای هوک و موشن از متن.",
+    "engine": "hyperframes",
+    "tags": [
+      "متن",
+      "موشن",
+      "خبر",
+      "تایپوگرافی"
+    ],
+    "techniques": [
+      "GSAP expo reveal",
+      "overflow mask",
+      "real Peyda weights"
+    ],
+    "code": "examples/hyperframes/index.html",
+    "sourceType": "local-authored",
+    "preview": "previews/hyperframes.jpg"
+  },
+  {
+    "id": "data-bars",
+    "name": "نمودار و شمارش همگام",
+    "description": "مقدار میله و عدد از دادهٔ یکسان و timeline واحد می‌آیند؛ نمونه با دادهٔ آزمایشی.",
+    "engine": "hyperframes",
+    "tags": [
+      "نمودار",
+      "آمار",
+      "خبر",
+      "SFX"
+    ],
+    "techniques": [
+      "scaleX bars",
+      "deterministic GSAP counter",
+      "timed sound"
+    ],
+    "code": "examples/hyperframes/index.html",
+    "sourceType": "local-authored",
+    "preview": "previews/hyperframes-chart.jpg"
+  },
+  {
+    "id": "react-motion",
+    "name": "تایپوگرافی با spring",
+    "description": "ورود فریم‌محور متن و کارت با React؛ قابل استفاده در تبلیغ و معرفی محصول.",
+    "engine": "remotion",
+    "tags": [
+      "تبلیغ",
+      "محصول",
+      "موشن",
+      "متن"
+    ],
+    "techniques": [
+      "useCurrentFrame",
+      "spring",
+      "interpolate",
+      "local font-face"
+    ],
+    "code": "engines/remotion/src/index.jsx",
+    "sourceType": "local-authored",
+    "preview": "previews/remotion.jpg"
+  },
+  {
+    "id": "react-chart",
+    "name": "داده در کامپوننت React",
+    "description": "میله‌های داده‌محور و رویداد صوتی با Sequence؛ برای دادهٔ تأییدشدهٔ مشتری یا خبر.",
+    "engine": "remotion",
+    "tags": [
+      "نمودار",
+      "تبلیغ",
+      "SFX"
+    ],
+    "techniques": [
+      "frame interpolation",
+      "Sequence",
+      "Audio"
+    ],
+    "code": "engines/remotion/src/index.jsx",
+    "sourceType": "local-authored"
+  },
+  {
+    "id": "source-photo",
+    "name": "عکس واقعی با نشانه‌گذاری",
+    "description": "حرکت محدود روی عکس و کشیدن مسیر روی جزء مرتبط؛ فایل واقعی و مختصات مشاهده‌شده لازم است.",
+    "engine": "hyperframes",
+    "tags": [
+      "عکس",
+      "خبر",
+      "محصول"
+    ],
+    "techniques": [
+      "bounded image transform",
+      "SVG path draw",
+      "source attribution"
+    ],
+    "code": "docs/workflows/news.md",
+    "sourceType": "workflow-recipe"
+  },
+  {
+    "id": "presenter-news",
+    "name": "چهره و گرافیک خبری",
+    "description": "فوتیج در لایهٔ زیر، تیتر و نقل‌قول در نقاط امن، زیرنویس زمان‌دار جدا.",
+    "engine": "hyperframes",
+    "tags": [
+      "چهره",
+      "خبر",
+      "گفتار",
+      "زیرنویس"
+    ],
+    "techniques": [
+      "video clip",
+      "scene overlays",
+      "word timestamps",
+      "separate caption track"
+    ],
+    "code": ".agents/skills/hyperframes/references/overlays.md",
+    "sourceType": "bundled-upstream-guide"
+  },
+  {
+    "id": "blogger-ad",
+    "name": "اجرای بلاگر و تبلیغ",
+    "description": "برش معنا‌محور، punch-in، کال‌اوت ویژگی و CTA با هویت مستقل مشتری.",
+    "engine": "either",
+    "tags": [
+      "چهره",
+      "بلاگر",
+      "تبلیغ",
+      "مشتری"
+    ],
+    "techniques": [
+      "cut list",
+      "bounded reframe",
+      "feature callouts",
+      "caption hierarchy"
+    ],
+    "code": "docs/workflows/advertising.md",
+    "sourceType": "workflow-recipe"
+  },
+  {
+    "id": "product-story",
+    "name": "معرفی محصول نرم‌افزاری",
+    "description": "از تصویر واقعی رابط یا محصول، زنجیرهٔ مسئله، قابلیت و دعوت به اقدام بساز؛ قابلیت جعلی نساز.",
+    "engine": "either",
+    "tags": [
+      "محصول",
+      "تازه سیستم",
+      "تبلیغ",
+      "رابط"
+    ],
+    "techniques": [
+      "actual UI screenshots",
+      "camera framing",
+      "semantic reveals",
+      "CTA hold"
+    ],
+    "code": "docs/workflows/advertising.md",
+    "sourceType": "workflow-recipe"
+  },
+  {
+    "id": "lt-mask-reveal",
+    "name": "Lower Third — Mask Reveal",
+    "description": "Cardless lower third: an accent sweep crosses and clip-path-reveals a heavy name, role fades up; for footage",
+    "engine": "hyperframes",
+    "tags": [
+      "چهره",
+      "خبر",
+      "معرفی",
+      "lower-third",
+      "overlay",
+      "podcast",
+      "interview",
+      "bold"
+    ],
+    "techniques": [
+      "Cardless lower third: an accent sweep crosses and clip-path-reveals a heavy name, role fades up; for footage"
+    ],
+    "sourceType": "registry-reference",
+    "source": "https://github.com/heygen-com/hyperframes/tree/main/registry",
+    "installCommand": "npm run hf -- add lt-mask-reveal",
+    "registryItem": "lt-mask-reveal",
+    "verification": "Technique description from actual registry metadata; code must be installed and inspected before use."
+  },
+  {
+    "id": "lower-third-bild",
+    "name": "Lower Third — BILD Style",
+    "description": "News-style lower third with tight-fit text boxes: white headline bar with red drop-shadow, red sub-line with white drop-shadow.",
+    "engine": "hyperframes",
+    "tags": [
+      "چهره",
+      "خبر",
+      "معرفی",
+      "broadcast",
+      "lower-third",
+      "news",
+      "overlay"
+    ],
+    "techniques": [
+      "News-style lower third with tight-fit text boxes: white headline bar with red drop-shadow, red sub-line with white drop-shadow."
+    ],
+    "sourceType": "registry-reference",
+    "source": "https://github.com/heygen-com/hyperframes/tree/main/registry",
+    "installCommand": "npm run hf -- add lower-third-bild",
+    "registryItem": "lower-third-bild",
+    "verification": "Technique description from actual registry metadata; code must be installed and inspected before use."
+  },
+  {
+    "id": "lt-stack-bars",
+    "name": "Lower Third — Stack Bars",
+    "description": "Two stacked bars: a dark name bar wipes from the left, an accent role bar wipes from the right",
+    "engine": "hyperframes",
+    "tags": [
+      "چهره",
+      "خبر",
+      "معرفی",
+      "lower-third",
+      "overlay",
+      "podcast",
+      "interview",
+      "bold"
+    ],
+    "techniques": [
+      "Two stacked bars: a dark name bar wipes from the left, an accent role bar wipes from the right"
+    ],
+    "sourceType": "registry-reference",
+    "source": "https://github.com/heygen-com/hyperframes/tree/main/registry",
+    "installCommand": "npm run hf -- add lt-stack-bars",
+    "registryItem": "lt-stack-bars",
+    "verification": "Technique description from actual registry metadata; code must be installed and inspected before use."
+  },
+  {
+    "id": "lt-kicker-name",
+    "name": "Lower Third — Kicker Name",
+    "description": "Cardless lower third with an accent eyebrow/kicker tag, heavy name, and a drawn baseline; for footage",
+    "engine": "hyperframes",
+    "tags": [
+      "چهره",
+      "خبر",
+      "معرفی",
+      "lower-third",
+      "overlay",
+      "podcast",
+      "interview",
+      "bold"
+    ],
+    "techniques": [
+      "Cardless lower third with an accent eyebrow/kicker tag, heavy name, and a drawn baseline; for footage"
+    ],
+    "sourceType": "registry-reference",
+    "source": "https://github.com/heygen-com/hyperframes/tree/main/registry",
+    "installCommand": "npm run hf -- add lt-kicker-name",
+    "registryItem": "lt-kicker-name",
+    "verification": "Technique description from actual registry metadata; code must be installed and inspected before use."
+  }
+];

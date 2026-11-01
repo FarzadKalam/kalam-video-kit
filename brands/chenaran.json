@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "chenaran",
+  "name": "کلام تازه چناران",
+  "category": "news",
+  "status": "ready",
+  "primaryColor": "#198754",
+  "handle": "@chenaran.kalametaze",
+  "website": null,
+  "assets": {
+    "header": "assets/brands/chenaran/header.png",
+    "overlayOnLight": "assets/brands/chenaran/overlay-on-light.png",
+    "overlayOnDark": "assets/brands/chenaran/overlay-on-dark.png"
+  },
+  "headerPolicy": "fixed-original-transparent",
+  "font": "Peyda",
+  "notes": [
+    "overlayOnLight/overlayOnDark یک overlay تمام‌قاب هستند؛ لوگوی کوچک فرض نشوند.",
+    "آیدی از متن یا لوگوی رسانهٔ دیگر استخراج نشود."
+  ],
+  "fontPolicy": {
+    "primary": "Peyda",
+    "complement": [],
+    "captionFallback": "Vazirmatn",
+    "selection": "brand-default",
+    "notes": "Meem explicitly disabled by owner; use Peyda for news identity."
+  }
+}
