@@ -2,6 +2,8 @@
 
 این کیت صدای فارسی تولید نمی‌کند. نریشن از کاربر می‌آید؛ برای گفتار موجود، صدای منبع مرجع است. ابزار ASR محلی با نصب اختیاری `scripts/setup-asr.ps1` آماده می‌شود. مدل Whisper در کش همان درایو ذخیره می‌شود و فایل مشتری به API فرستاده نمی‌شود. دانلود اولیهٔ مدل اینترنت و چندصد مگابایت فضا می‌خواهد؛ روی CPU ممکن است کند باشد.
 
+در لینوکس نصب با `bash scripts/setup-asr.sh` و اجرا با `.local/asr-venv/bin/python` است؛ در ویندوز مسیر `Scripts/python.exe` استفاده شود.
+
 ```powershell
 node scripts/kit.mjs media extract .local/projects/job/assets/voice.wav .local/projects/job/analysis/speech.wav
 .local/asr-venv/Scripts/python.exe scripts/transcribe.py .local/projects/job/analysis/speech.wav --output .local/projects/job/analysis/transcript.json

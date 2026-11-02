@@ -13,11 +13,12 @@
     "overlayOnDark": "assets/brands/golbahar/overlay-on-dark.png",
     "profile": "assets/brands/golbahar/profile.jpg"
   },
-  "headerPolicy": "fixed-original-transparent",
+  "headerPolicy": "fixed-circular-profile",
   "font": "Peyda",
   "notes": [
     "overlayOnLight/overlayOnDark یک overlay تمام‌قاب هستند؛ لوگوی کوچک فرض نشوند.",
-    "آیدی از متن یا لوگوی رسانهٔ دیگر استخراج نشود."
+    "آیدی از متن یا لوگوی رسانهٔ دیگر استخراج نشود.",
+    "Owner instruction 2026-11-02: compact modern circular official profile badge; keep upper frame open for motion. Legacy header/overlays are archived, not the default."
   ],
   "fontPolicy": {
     "primary": "Peyda",
@@ -27,5 +28,33 @@
     "notes": "Meem explicitly disabled by owner; use Peyda for news identity."
   },
   "colorEvidence": "Official Kalam Studio brand map, verified 2026-11-02",
-  "handleEvidence": "Owner explicitly confirmed dot-separated Instagram handles, 2026-11-02"
+  "handleEvidence": "Owner explicitly confirmed dot-separated Instagram handles, 2026-11-02",
+  "headerAsset": "profile",
+  "identity": {
+    "profile": "assets.profile",
+    "shape": "circle",
+    "name": "کلام تازه گلبهار",
+    "namePlacement": "beside-profile",
+    "handle": "@golbahar.kalametaze",
+    "handleDirection": "ltr",
+    "handleVisibility": "always",
+    "legacyOverlays": "archive-only"
+  },
+  "motionDirection": {
+    "guide": "docs/workflows/news-motion.md",
+    "backgrounds": [
+      "angled-grid-gradient",
+      "layered-light",
+      "footage-aware"
+    ],
+    "cards": "glass-when-needed",
+    "text": "kinetic-phrase-based",
+    "nonCardTools": [
+      "documented-charts",
+      "progress",
+      "check-cross",
+      "cursor-click",
+      "animated-svg"
+    ]
+  }
 }

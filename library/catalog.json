@@ -356,5 +356,32 @@
     ],
     "sourceType": "external-library",
     "verification": "Official page reviewed; individual example toolchains require source inspection."
+  },
+  {
+    "id": "news-dynamic-identity",
+    "name": "هویت دایره‌ای و شبکهٔ پویا",
+    "description": "نمونهٔ آموزشی تازهٔ کلام تازه: پروفایل+نام فارسی، آیدی همیشگی، عمق شبکه، شیشه، متن آزاد، SVG و نوار.",
+    "engine": "hyperframes",
+    "tags": [
+      "خبر",
+      "کلام تازه",
+      "شیشه",
+      "شبکه",
+      "پروفایل",
+      "SVG",
+      "نمودار",
+      "ترنزیشن"
+    ],
+    "techniques": [
+      "GSAP phrase transform reveal and blur exit",
+      "timeline-driven perspective grid",
+      "glass surface",
+      "SVG stroke reveal",
+      "progress scaleX",
+      "persistent circular profile and isolated LTR handle"
+    ],
+    "sourceType": "local-authored",
+    "code": "examples/hyperframes-news/index.html",
+    "preview": "previews/news-dynamic.jpg"
   }
 ]

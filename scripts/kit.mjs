@@ -1,17 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {spawnSync} from 'node:child_process';
-import {createRequire} from 'node:module';
 import {ROOT,readJson,localEnv,browser} from './lib/paths.mjs';
 import {createProject} from './projects.mjs';
-const require=createRequire(import.meta.url);
+import {binary} from './lib/tools.mjs';
 const [command,...args]=process.argv.slice(2);
 const opts={}; for(let i=0;i<args.length;i++) if(args[i].startsWith('--')) opts[args[i].slice(2)]=args[i+1]&&!args[i+1].startsWith('--')?args[++i]:true;
 const env=localEnv(); const chrome=browser(); if(chrome) env.HYPERFRAMES_BROWSER_PATH=chrome;
-function binary(name) {
-  if(name==='ffmpeg') return require('ffmpeg-static');
-  return path.join(ROOT,'node_modules/@ffprobe-installer/win32-x64/ffprobe.exe');
-}
 function run(exe,argv) {const r=spawnSync(exe,argv,{cwd:ROOT,env,stdio:'inherit'});if(r.error)throw r.error;process.exitCode=r.status??1;}
 try {
   if(command==='doctor') {

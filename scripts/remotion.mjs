@@ -13,8 +13,8 @@ try {
   const project=path.dirname(path.dirname(input)); // project/src/index.jsx
   const outIndex=['render','still'].includes(command)?1:-1;
   if(outIndex>=0&&rest[outIndex]&&!rest[outIndex].startsWith('--')&&fs.existsSync(path.resolve(rest[outIndex])))throw new Error('خروجی از قبل وجود دارد؛ نام نسخهٔ تازه بده.');
-  if(!fs.existsSync(path.join(project,'node_modules')))fs.symlinkSync(path.join(engine,'node_modules'),path.join(project,'node_modules'),'junction');
-  const argv=[path.join(engine,'node_modules/@remotion/cli',bin),command,input,...adjusted,'--browser-executable',chrome,'--public-dir',path.join(project,'public')];
+  if(!fs.existsSync(path.join(project,'node_modules')))fs.symlinkSync(path.join(engine,'node_modules'),path.join(project,'node_modules'),process.platform==='win32'?'junction':'dir');
+  const argv=['--require',path.join(ROOT,'scripts/runtime-home.cjs'),path.join(engine,'node_modules/@remotion/cli',bin),command,input,...adjusted,'--browser-executable',chrome,'--public-dir',path.join(project,'public')];
   if(command==='render')argv.push('--concurrency','1');
   const env=localEnv(); env.NODE_PATH=path.join(engine,'node_modules');
   const result=spawnSync(process.execPath,argv,{cwd:engine,env,stdio:'inherit'});

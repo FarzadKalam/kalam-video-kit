@@ -33,3 +33,17 @@
 | HyperFrames پس از تغییر wrapper | passed | check مرورگری نمونهٔ محلی: ok=true، صفر error و warning، دو info مربوط به mask ورود؛ گزارش 57d514e5-890c-408e-ba3e-f95f725d2370 در artifacts محلی |
 
 این تغییرات ساخت فیلم جدید برای مشتری نیستند. مدل جداسازیِ دریافت‌نشده و رونویسی اختیاری هنوز قابلیت آزمایش‌شده معرفی نمی‌شوند.
+
+## هویت و ابزار چندسکویی — ادامهٔ ۲۰۲۶-۱۱-۰۲
+
+| بررسی | وضعیت | شاهد |
+| --- | --- | --- |
+| قواعد خبر | passed در دامنهٔ داده/راهنما | سه پروفایل با هویت دایره‌ای+نام فارسی و آیدی دائمی؛ راهنمای پویایی، شیب متن، تأکید زیرنویس، شیشه/glow و برنامهٔ تصویری در skill و AGENTS متصل‌اند |
+| تست ابزار | passed روی Windows | هفت تست Node؛ اجرای واقعی FFmpeg/FFprobe با loader جدید؛ ساخت visual-plan؛ doctor و validator موفق |
+| نمونهٔ تازه | passed در دامنهٔ مرورگر | HyperFrames check واقعی نمونهٔ هشت‌ثانیه‌ای: صفر error/warning در lint/runtime/layout/craft/audio؛ گزارش 1faab8e8-e6b6-4ccc-8658-833b687d8bb2؛ قاب‌های واقعی ۲ و۷٫۷۶ ثانیه دیده شدند و پوستر مشترک در library/previews/news-dynamic.jpg است |
+| Remotion پس از تغییر wrapper | passed روی Windows | bundling و compositions واقعی KalamDemo با home محلی؛ log محلی .cache/remotion-cross-platform-check.log؛ رندر جدید MP4 در این تغییر انجام نشده |
+| اسکریپت Linux | passed فقط syntax | bash -n هر دو setup و setup-asr با Git Bash ویندوز؛ تست نصب یا رندر لینوکس محسوب نمی‌شود |
+| Linux x64/glibc | pending | بستهٔ چندسکویی، browser detection، directory symlink، دستور نصب و CI Ubuntu 24.04 اضافه شده؛ این میزبان Linux فعال ندارد و نتیجهٔ زندهٔ CI هنوز تأیید نشده |
+| تصویرساز و صدا | محدوده روشن | روال تصویرساز مستند شده، ولی هیچ تولید تصویر/API در این تغییر اجرا نشده. cue ممتد پیشرفت با Python استاندارد ساخته و منبعش ثبت شده؛ بررسی شنیداری نهایی هنوز pending است |
+
+کتابخانه اکنون۱۸ مدخل دارد. نمونهٔ تکنیک، وعدهٔ کیفیت هر سفارش آینده نیست؛ فایل مشتری وارد Git نشده است.

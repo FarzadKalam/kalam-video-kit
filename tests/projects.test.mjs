@@ -26,6 +26,8 @@ test('new job preserves original files, Unicode and refuses overwriting an exist
   assert.equal(state.width,1080);assert.equal(state.height,1920);
   const sound=JSON.parse(fs.readFileSync(path.join(p,'sound-plan.json'),'utf8'));
   assert.equal(sound.fps,state.fps);assert.equal(sound.review.listened,false);assert.deepEqual(sound.events,[]);
+  const visual=JSON.parse(fs.readFileSync(path.join(p,'visual-plan.json'),'utf8'));
+  assert.deepEqual(visual.assets,[]);assert.equal(visual.review.status,'pending');
   assert.throws(()=>createProject({id:'job',brand:'test'},root));
   assert.throws(()=>createProject({id:'bad',brand:'test',mode:'invalid'},root));
 });
@@ -36,7 +38,7 @@ test('Remotion job stages public assets separately and never inherits another cu
 });
 test('a junction cannot redirect a project write outside its workspace',()=>{
   const root=fixture(), outside=fixture();fs.mkdirSync(path.join(root,'.local'),{recursive:true});
-  fs.symlinkSync(outside,path.join(root,'.local/projects'),'junction');
+  fs.symlinkSync(outside,path.join(root,'.local/projects'),process.platform==='win32'?'junction':'dir');
   assert.throws(()=>createProject({id:'job',brand:'test'},root));
   assert.ok(!fs.existsSync(path.join(outside,'job')));
 });

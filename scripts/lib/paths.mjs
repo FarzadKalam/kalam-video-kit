@@ -27,9 +27,12 @@ export function localEnv(root=ROOT) {
     HYPERFRAMES_SKIP_SKILLS:'1',HYPERFRAMES_NO_UPDATE_CHECK:'1',
     PLAYWRIGHT_BROWSERS_PATH:path.join(cache,'browsers'),PUPPETEER_CACHE_DIR:path.join(cache,'browsers')};
 }
-export function browser() {
-  const candidates=[process.env.KALAM_BROWSER_PATH, process.env.HYPERFRAMES_BROWSER_PATH,
+export function browser(env=process.env,platform=process.platform) {
+  const system=platform==='linux'?[
+    '/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium','/usr/bin/chromium-browser',
+    '/opt/google/chrome/chrome']:[
     'C:/Program Files/Google/Chrome/Application/chrome.exe','C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
-    'C:/Program Files/Microsoft/Edge/Application/msedge.exe', process.env.LOCALAPPDATA&&path.join(process.env.LOCALAPPDATA,'Google/Chrome/Application/chrome.exe')];
+    'C:/Program Files/Microsoft/Edge/Application/msedge.exe', env.LOCALAPPDATA&&path.join(env.LOCALAPPDATA,'Google/Chrome/Application/chrome.exe')];
+  const candidates=[env.KALAM_BROWSER_PATH, env.HYPERFRAMES_BROWSER_PATH,...system];
   return candidates.find(p=>p&&fs.existsSync(p));
 }
